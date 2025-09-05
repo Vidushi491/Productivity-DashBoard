@@ -1,0 +1,89 @@
+:root{
+    --pri:#0C0C0C;
+    --sec:#481E14;
+    --tri1:#9B3922;
+    --tri2:#F2613F;
+}
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }   
+    html, 
+    body {
+        width: 100%;
+        height: 100%;
+    } 
+    #main{
+        height: 100%;
+        width: 100%;
+        background-color: var(--pri);
+    }
+    section.allElems{
+        height: 100%;
+        width: 100%;
+        padding: 40px;
+        padding-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 40px;
+        position: relative;
+    }
+    .elem1{
+    height: 400px;
+    width: 250px;
+    font-size: 30px;
+    border-radius: 10px;
+    overflow: hidden; position: relative;
+    transition: all ease 0.2s;
+    }
+    .elem1 img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        box-shadow: 0 5px 20px var(--sec);
+    }
+    .elem1 h2{
+        position: absolute;
+        bottom: 3%;
+        color: #481E14;
+        font-size: 33px;
+        font-weight: 500;
+
+    }
+    .elem1:active{
+         transform: scale(0.97);
+    }
+    .fullElem{
+        height: 100%;
+        width: 100%;
+        background-color: var(--pri);
+        padding: 40px;
+        font-size: 60px;
+        display: none;
+        position: absolute;
+    }
+    .fullElem h2{
+        font-size: 30px;
+        color: white;
+        text-align: start;
+        margin-bottom: 20px;
+
+    } 
+    .back{
+        position: absolute;
+        right: 3%;
+        background-color: red;
+        border-radius: 10px;
+        padding: 7px 8px;
+        border: none;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .back:active{
+         transform: scale(0.97);
+    }
