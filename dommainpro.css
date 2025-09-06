@@ -1,8 +1,12 @@
 :root{
     --pri:#0C0C0C;
-    --sec:#481E14;
-    --tri1:#9B3922;
-    --tri2:#F2613F;
+    --sec:#4a3834ff;
+    --tri1:rgb(73, 72, 71);
+    --tri2:rgb(105, 105, 105);
+    --white: white;
+    --green: rgb(98, 220, 98);
+    --blue: rgb(83, 83, 218);
+    --red: red;
 }
     *{
         margin: 0%;
@@ -16,69 +20,124 @@
         height: 100%;
     } 
     #main{
-        height: 100%;
+        height: 120%;
         width: 100%;
         background-color: var(--pri);
+        padding-top: 100px;
     }
+
+
     section.allElems{
         height: 100%;
         width: 100%;
         padding: 40px;
-        padding-top: 80px;
+        overflow: auto;
+        position: absolute;
+    }
+    .allElems header{
+        width: 100%;
+        background-image: url(https://i.pinimg.com/1200x/65/16/9f/65169f2fc6f5ce2b6fbb09ee47a8413c.jpg);
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 40px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 70px 20px;
+    }
+    header .header1 h1{
+        font-size: 80px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    header .header1 h2{
+        font-size: 40px;
+        font-weight: 500;
+    }
+    header .header1 h4{
+        font-size: 50px;
+         font-weight: 300;
+     }
+    header .header2 h2{
+       font-size: 70px;
+         font-weight: 700;
+     }
+    header .header2 h4{
+        font-size: 40px;
+        font-weight: 500;
+        margin-top: -5px;
+        margin-bottom: 5px;
+        opacity: 0.8;
+     }
+    header .header2 h3{
+        font-size: 20px;
+        font-weight: 500;
+        opacity: 0.8;
+     }
+
+
+    .allElems .allFeatures{
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        gap: 40px;
-        position: relative;
+        gap: 50px;
+       
     }
-    .elem1{
+    .elem{
     height: 400px;
-    width: 250px;
-    font-size: 30px;
+    width: 245px;
     border-radius: 10px;
-    overflow: hidden; position: relative;
+    overflow: hidden;
+    position: relative;
     transition: all ease 0.2s;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
     }
-    .elem1 img{
+    .elem img{
         height: 100%;
         width: 100%;
         object-fit: cover;
         cursor: pointer;
         box-shadow: 0 5px 20px var(--sec);
     }
-    .elem1 h2{
+    .elem h2{
         position: absolute;
+        left: 5%;
         bottom: 3%;
-        color: #481E14;
-        font-size: 33px;
-        font-weight: 500;
+        font-size: 35px;
+        font-weight: 700;
 
     }
-    .elem1:active{
+    .elem:active{
          transform: scale(0.97);
     }
     .fullElem{
         height: 100%;
         width: 100%;
         background-color: var(--pri);
-        padding: 40px;
-        font-size: 60px;
+        padding: 20px;
+        font-size: 50px;
         display: none;
         position: absolute;
+        top: 0;
+        z-index: 999;
     }
     .fullElem h2{
         font-size: 30px;
-        color: white;
+        color: var(--white);
         text-align: start;
         margin-bottom: 20px;
+        
 
     } 
     .back{
         position: absolute;
         right: 3%;
-        background-color: red;
+        top: 5%;
+        background-color: var(--red);
         border-radius: 10px;
-        padding: 7px 8px;
+        padding: 12px 12px;
         border: none;
         font-size: 18px;
         font-weight: 700;
@@ -87,3 +146,456 @@
     .back:active{
          transform: scale(0.97);
     }
+   
+.todo-list-fullpage{
+    height: 120%;
+    width: 100%;
+}
+.todo-list-fullpage h2{
+    font-size: 65px;
+}
+.todo-list-fullpage .todo-container{
+   height: 80%;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo-list-fullpage .todo-container .addTask{
+    width: 33%;
+    background-color: var(--sec);
+    height: 100%;
+    border-radius: 20px;
+}
+.todo-list-fullpage .todo-container .allTask{
+    width: 100%;
+    height: 100%; 
+    border-radius: 20px;
+
+}
+.todo-list-fullpage .todo-container .addTask form{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 30px;
+   height: 550px;
+}
+.todo-container .addTask form #task-input{
+  padding: 15px 25px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  width: 100%;
+  font-size: 40px;
+  color: var(--pri);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.todo-container .addTask form textarea{
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 28px;
+  background-color: var(--white);
+  color: var(--pri);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+.todo-container .addTask form button{
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 28px;
+  background-color: var(--white);
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  margin-bottom: 20px;
+  transition: all ease 0.3s;
+}
+.todo-container .addTask form button:active{
+    scale: 0.96;
+}
+.todo-list-fullpage .todo-container .allTask{
+    width: 65%;
+    background-color: var(--sec);
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 30px;
+   overflow: auto;
+}
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--white);
+    padding: 20px 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.task h5{
+    color: var(--pri);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.task h5 span{
+    background-color: var(--red);
+    color: var(--white);
+    padding: 4px 6px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.task h5 span.true{
+   opacity: 1;
+}
+.task h5 span.false{
+   opacity: 0;
+}
+.task button{
+    padding: 15px 30px;
+    background-color: var(--green);
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+}
+.task button:active{
+    scale: 0.96;
+}
+.mark-imp{
+display: flex;
+align-items: center;
+justify-content: flex-start;
+padding: 10px 10px;
+margin-bottom: 20px;
+width: 100%;
+gap: 20px; 
+color: var(--white);     
+}
+.mark-imp input{
+  scale: 1.7;
+}
+.mark-imp label{
+ font-size: 3px;
+}
+
+.daily-planner-fullpage{
+    height: 120%;
+    width: 100%;
+}
+.daily-planner-fullpage h2{
+    font-size: 65px;
+}
+.daily-planner-fullpage .day-planner {
+    background-color: var(--sec);
+    height: 85%;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: auto;
+}
+.daily-planner-fullpage .day-planner .day-planner-time{
+background-color: var(--sec);
+display: flex;
+align-items: center;
+position: relative;
+width: 49%;
+margin-bottom: 15px;
+}
+.day-planner .day-planner-time p{
+    position: absolute;
+    top: 12%;
+    left: 1%;
+    font-size: 13px;
+
+}
+.day-planner .day-planner-time input{
+    padding: 20px 45px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: none;
+    font-size: 32px;
+    padding-top: 34px;
+    outline: none;
+}
+
+.motivation-fullpage{
+    height: 120%;
+    width: 100%;
+}
+.motivation-fullpage-container{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.motivation-fullpage .motivation-container{
+    height: 300px;
+    width: 80%;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+.motivation-fullpage .motivation-container::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--tri2);
+    border-radius: 50px;
+    scale: 1.15;
+    filter: blur(150px);
+    z-index: 8;
+}
+.motivation-fullpage .motivation-container .motivation-wrapper{
+z-index: 10;
+position: absolute;
+width: 100%;
+background-color: var(--tri2);
+padding: 17px;
+border-radius: 30px;
+}
+.motivation-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.motivation-1 h2{
+    padding: 30px;
+    font-size: 50px;                        
+    font-weight: 500;
+    background-color: var(--tri2);
+    border-radius: 20px; 
+    width: fit-content;
+    text-align: right;
+}
+.motivation-2{
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.motivation-2 h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--pri);
+}
+.motivation-3{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.motivation-3 h2{
+    background-color: var(--tri2);
+    padding: 30px;
+    border-radius: 20px;
+    width: fit-content;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.pomodoro-fullpage{
+    height: 120%;
+    width: 100%;
+}
+.pomodoro-fullpage h2{
+    font-size: 65px;
+}
+.pomodoro-fullpage .Pomo-timer{
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.Pomo-timer h1{
+    font-size: 170px;;
+}
+.Pomo-timer button{
+    background-color: var(--tri2);
+    padding: 15px 40px;
+    font-size: 32px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    color: var(--white);
+    box-shadow: 7px 7px 0px var(--white);
+    transition: all ease 0.2s;
+    font-weight:  700;
+}
+.Pomo-timer button:active{
+    box-shadow:  0px 0px 0px var(--white);
+}
+.pomodoro-fullpage .session{
+    color: var(--white);
+    position: absolute;
+    top: 20%;
+    left: 42%;
+    transform: translateX(-50%,0);
+    background-color: var(--tri2);
+    padding: 15px 30px;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.goals-fullpage{
+  width: 100%;
+  height: 120%;
+  background-color: var(--pri);
+}
+.goals-fullpage header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.goals-fullpage header h1 {
+  font-size: 65px;
+  font-weight: 800;
+  color: var(--white);
+   margin-bottom: 10px;
+}
+.goals-fullpage header p {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--white);
+   margin-bottom: 100px;
+}
+.goals-container {
+  max-width: 800px;
+  margin: auto;
+}
+ .goal-input form {
+  display: flex;
+  gap: 15px;
+  background: var(--tri2);
+  padding: 15px;
+  border-radius: 10px;
+
+}
+ .goal-input input[type="text"] {
+  flex: 2;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid var(--sec);
+  border-radius: 8px;
+  outline: none;
+   border: none;
+}
+.goal-input input[type="date"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid var(--sec);
+  border-radius: 8px;
+  outline: none;
+   border: none;
+ 
+}
+.goal-input button {
+  background: var(--green);
+  color: var(--white);
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.goal-input button:hover {
+  background: var(--green);
+}
+.goal-list {
+  margin-top: 30px;
+}
+.goal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.goal h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--sec);
+}
+.goal small {
+  display: block;
+  color: var(--white);
+  margin-top: 4px;
+}
+.goal button {
+  padding: 8px 15px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.goal button:hover {
+  background: var(--green);
+}
+
+
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 35px;
+    padding: 20px 10px;
+ }
+ .nav-in{
+    display: flex;
+    background-color: var(--pri);
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 10px;
+    
+ }
+ .nav-in h2{
+color: var(--white);
+font-size: 40px;
+font-weight: 700;
+ }
+
+
+.theme{
+    background-color: var(--white);
+    padding: 10px 10px;
+    border-radius: 50%;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+.theme i{
+    color: var(--pri);
+    font-weight: 700;
+    font-size: 20px;
+    pointer-events: none;
+}
+.theme:active{
+    scale: 0.96;
+}
+
